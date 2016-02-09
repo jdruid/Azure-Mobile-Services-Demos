@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Azure Mobile Services Classic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/">Azure Mobile Services : Classic</a>
+                <a class="navbar-brand" href="demo.html">Working Example</a>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">					
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
+	
+	<div class="container">
+	
+		<div class="text-center">
+			<h1>Azure Mobile Services Classic Example</h1>
+			<p class="lead">This demo sites shows you how to configure Mobile Services, add a custom api and use authentication via 3rd party services.</p>			
+		</div>
+		
+		<div class="row">
+            <h4>Create Mobile Service</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>Login to the Classic Azure Portal. Click on NEW -> MOBILE SERVICE -> CREATE</li>
+                <li>Enter a url for your clients to access the service.</li>
+                <li>Choose eiher an existing SQL Server or Create a New SQL Server (this is used to host your database).</li>
+                <li>Done</li>
+                </ol>
+			</div>	
+            <div class="col-md-6">
+                <img src="img/ms-create.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>	
+		</div>
+        
+        <div class="row">
+            <h4>Create Your Data Table(s)</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>Click on the Mobile Service name you just created.</li>
+                <li>In the navigation tab, select DATA.</li>
+                <li>On the bottom of the screen, click CREATE and choose a table name. You can also modify permissions if needed.</li>
+                <li>Done</li>
+                </ol>
+			</div>
+            <div class="col-md-6">
+                <img src="img/ms-data.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>			
+		</div>
+        
+        <div class="row">
+            <h4>Modify Your Schema</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>Click on the table name you just created and select COLUMN from the navigation tab.</li>
+                <li>On the bottom of the screen, click ADD COLUMN and add as needed.</li>
+                <li>You can connect to the Database you just created by using a SQL client tool and your connection string.</li>
+                <li>To find your connection string click on DB in the left nav, find your Database name and you will see your connection string.</li>
+                <li>Windows: can use SQL Management Tools or Cloud Explorer (within Visual Studio), or Mac: SQLPro for MSSQL or Mac SQL Studio</li>
+                <li><em>FYI: if you are connecting to the SQL server you will have to add your ip address to the server firewall.</em></li>
+                <li>Done</li>
+                </ol>
+			</div>	
+            <div class="col-md-6">
+                <img src="img/ms-addcolumn.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>		
+		</div>
+        
+        <div class="row">
+            <h4>Access Your Table API</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>Automatically you will get a CRUD (create, read, update, delete) API created for you.</li>
+                <li>Click on the table and then click on SCRIPT in the navigation tab</li>
+                <li>There will be 4 scripts that you can modify if needed.</li>
+                <li><em>FYI: if you name your object and properties in your code, then no need to change anything in the api unless you need specific business logic</em></li>
+                <li>Your endpoint will be: https://MOBILE SERVICE NAME.azure-mobile.net/tables/TABLE NAME</li>
+                <li>Done</li>
+                </ol>
+			</div>	
+            <div class="col-md-6">
+                <img src="img/ms-api.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>            		
+		</div>  
+        
+        <div class="row">
+            <h4>Create A Custom API</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>From our Mobile Services page, click on the navigation tab API.</li>
+                <li>Click CREATE -> and provide your custom API with a name.</li>
+                <li>Here you can build custom logic to query multiple tables or perform some other routine.</li>
+                <li>Your endpoint will be: https://MOBILE SERVICE NAME.azure-mobile.net/api/API NAME</li>
+                <li>Done</li>
+                </ol>
+			</div>	
+            <div class="col-md-6">
+                <img src="img/ms-customapi.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>	
+		</div>
+        
+        <div class="row">
+            <h4>View Errors and Logs</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li>From our Mobile Services page, click on the navigation tab LOGS.</li>
+                <li>All logs will be there.</li>                
+                <li>Done</li>
+                </ol>
+			</div>
+            <div class="col-md-6">
+                <img src="img/ms-logs.png" class="img-responsive" alt="Responsive image"></img>	
+            </div>
+        </div>    
+        
+        <div class="row">
+            <h4>Demo and Code</h4>
+        	<div class="col-md-6">
+                <ol>
+				<li><a href="demo.html">Demo</a></li>
+                <li>Custom api code</li>                
+                <li>Table API Code</li>
+                </ol>
+			</div>
+            <div class="col-md-6">
+               
+            </div>
+        </div>    
+        
+		
+	</div><!-- /.container -->
+	
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted"><a href="http://drew5.net">Drew5.NET</a> | <a href="http://github.com/jdruid">gitHub</a></p>
+		</div>
+	</footer>	
+    
+	<!-- script references -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	
+</body>
+</html>
